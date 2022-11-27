@@ -81,9 +81,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
 }
-input{
-    border-radius: 5px;
-}
+
 .create{
 height: 10vh;
 display: flex;
@@ -93,4 +91,12 @@ align-items: center;
 .footer{
     padding-left: 10vh;
 height: 10vh;
+}
+input:hover{
+    border-color: blue;
+
+}
+input{
+    border-radius: 5px;
+    border-color: black;
 }
