@@ -8,8 +8,8 @@ form_head.innerHTML='Let\'s do this!'
 form.appendChild(form_head)
 const ip_field=document.createElement('div')
 ip_field.id='ip_field'
-const ip_arr=['fn','ln','em','pn','pw','2pw']
-const ip_text={'fn':'First Name','ln':'Last Name','em':'Email','pn':'Phone Number','pw':'Password','2pw':'Confirm Password'}
+const ip_arr=['fn','ln','em','pn','pw','cpw']
+const ip_text={'fn':'First Name','ln':'Last Name','em':'Email','pn':'Phone Number','pw':'Password','cpw':'Confirm Password'}
 const ip_field1=document.createElement('div')
 const ip_field2=document.createElement('div')
 for (let i=0;i<ip_arr.length;i++){
@@ -19,7 +19,9 @@ for (let i=0;i<ip_arr.length;i++){
     ip_name.htmlFor=ip_arr[i]
     const ip_fl=document.createElement('input')
     ip_fl.classList=ip_arr[i]
+    ip_fl.required=true
     ip_fl.name=ip_arr[i]
+    ip_fl.id=ip_arr[i]
     ip_div.appendChild(ip_name)
     ip_div.appendChild(ip_fl)
     if (i<ip_arr.length/2){
@@ -64,5 +66,12 @@ const bg_txt=document.createElement('div')
 bg_txt.innerHTML='Photo by Automobili Lamborghini S.p.A.'
 bg_txt.id='side_txt'
 side.appendChild(bg_txt)
-
-
+//ip_arr=['fn','ln','em','pn','pw','2pw']
+const em=document.querySelector('#em')
+em.type='email'
+const pw=document.querySelector('#pw')
+pw.type='password'
+const cpw=document.querySelector('#cpw')
+cpw.type='password'
+const pn=document.querySelector('#pn')
+pn.type='number'

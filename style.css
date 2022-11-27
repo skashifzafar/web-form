@@ -2,6 +2,11 @@
 :root{
     font-family: Delicious;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 html, body { 
     height:100%; 
     padding:0; 
