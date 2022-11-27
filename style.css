@@ -2,3 +2,77 @@
 :root{
     font-family: Delicious;
 }
+html, body { 
+    height:100%; 
+    padding:0; 
+    margin:0; 
+}
+#container{
+    display: flex;
+}
+#side{
+    width: 40vh;
+    display: grid;
+}
+#bg{
+    height: 100vh;
+}
+#logo_div{
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+    background-color:rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    width: 40vh ;
+    align-items: center;
+}
+#logo{
+    width: 10vh;
+    opacity: 1;
+}
+#side_txt{
+    position: absolute;
+    font-size: 2vh;
+    z-index: 1;
+    bottom: 5vh;
+    color: aliceblue;
+    left: 5vh;
+}
+#main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.356);
+}
+.para{
+    height: 25vh;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 50vh;
+}
+#ip_field{
+    display: flex;
+    gap: 2vw;
+}
+#ip_field div{
+    display: flex;
+    padding-top: 3vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+input{
+    border-radius: 5px;
+}
+.create{
+
+}
+.footer{
+
+}

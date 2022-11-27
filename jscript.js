@@ -6,8 +6,11 @@ const form_head=document.createElement('div')
 form_head.innerHTML='Let\'s do this!'
 form.appendChild(form_head)
 const ip_field=document.createElement('div')
+ip_field.id='ip_field'
 const ip_arr=['fn','ln','em','pn','pw','2pw']
 const ip_text={'fn':'First Name','ln':'Last Name','em':'Email','pn':'Phone Number','pw':'Password','2pw':'Confirm Password'}
+const ip_field1=document.createElement('div')
+const ip_field2=document.createElement('div')
 for (let i=0;i<ip_arr.length;i++){
     const ip_div=document.createElement('div')
     const ip_name=document.createElement('div')
@@ -16,8 +19,15 @@ for (let i=0;i<ip_arr.length;i++){
     ip_fl.classList=ip_arr[i]
     ip_div.appendChild(ip_name)
     ip_div.appendChild(ip_fl)
-    ip_field.appendChild(ip_div)
+    if (i<ip_arr.length/2){
+        ip_field1.appendChild(ip_div)    
+    }
+    else{
+        ip_field2.appendChild(ip_div)
+    }
 }
+ip_field.appendChild(ip_field1)
+ip_field.appendChild(ip_field2)
 form.appendChild(ip_field)
 const create=document.querySelector('.create')
 const cr_but=document.createElement('button')
@@ -33,13 +43,22 @@ foot.appendChild(ft_text)
 foot.appendChild(ft_link)
 const side=document.querySelector('#side')
 const bg_img=document.createElement('img')
+bg_img.id='bg'
 bg_img.src='bg/bg_left.jpg'
-side.appendChild(bg_img)
+const bg_div=document.createElement('div')
+bg_div.id='bg_div'
+bg_div.appendChild(bg_img)
+side.appendChild(bg_div)
+const logo_div=document.createElement('div')
+logo_div.id='logo_div'
 const logo=document.createElement('img')
+logo_div.appendChild(logo)
 logo.src='bg/logo.png'
-side.appendChild(logo)
+logo.id='logo'
+side.appendChild(logo_div)
 const bg_txt=document.createElement('div')
 bg_txt.innerHTML='Photo by Automobili Lamborghini S.p.A.'
+bg_txt.id='side_txt'
 side.appendChild(bg_txt)
 
 
