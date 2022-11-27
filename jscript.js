@@ -1,6 +1,6 @@
 const contain=document.querySelector('#container')
 const para=document.querySelector('.para')
-para.innerHTML='This is not a real online service. You know you need something like this in your life to help you realise your deepest dream. <br> You know you want to.'
+para.innerHTML='This is not a real online service. You know you need something like this in your life to help you realise your deepest dream. <br> You know what to do.'
 const form=document.querySelector('.form')
 const form_head=document.createElement('div')
 form_head.id='form_head'
