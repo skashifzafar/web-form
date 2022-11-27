@@ -3,6 +3,7 @@ const para=document.querySelector('.para')
 para.innerHTML='This is not a real online service. You know you need something like this in your life to help you realise your deepest dream. <br> You know you want to.'
 const form=document.querySelector('.form')
 const form_head=document.createElement('div')
+form_head.id='form_head'
 form_head.innerHTML='Let\'s do this!'
 form.appendChild(form_head)
 const ip_field=document.createElement('div')
@@ -13,10 +14,12 @@ const ip_field1=document.createElement('div')
 const ip_field2=document.createElement('div')
 for (let i=0;i<ip_arr.length;i++){
     const ip_div=document.createElement('div')
-    const ip_name=document.createElement('div')
+    const ip_name=document.createElement('label')
     ip_name.innerHTML=ip_text[ip_arr[i]]
+    ip_name.htmlFor=ip_arr[i]
     const ip_fl=document.createElement('input')
     ip_fl.classList=ip_arr[i]
+    ip_fl.name=ip_arr[i]
     ip_div.appendChild(ip_name)
     ip_div.appendChild(ip_fl)
     if (i<ip_arr.length/2){
@@ -32,6 +35,7 @@ form.appendChild(ip_field)
 const create=document.querySelector('.create')
 const cr_but=document.createElement('button')
 cr_but.type='submit'
+cr_but.textContent='Submit'
 create.appendChild(cr_but)
 const foot=document.querySelector('.footer')
 const ft_text=document.createElement('div')
